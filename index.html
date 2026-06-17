@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Prode Mundial - Inicio</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+  <script src="js/data.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1>PRODE Mundial</h1>
+      <p class="lead">Tres participantes · Predicciones estáticas · Admin para resultados</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="controls">
+      <div class="participants">
+        <label>Participantes (fijos):</label>
+        <div id="participantsList" style="margin-top:6px"></div>
+        <small style="display:block;opacity:0.85;margin-top:6px">Solo lectura — usar la página admin para modificar predicciones o resultados.</small>
+      </div>
+      <div class="day-select">
+        <label>Seleccionar día:</label>
+        <select id="daySelect"></select>
+      </div>
+    </section>
+
+    <section>
+      <h2>Partidos</h2>
+      <div id="matchesList" class="matches"></div>
+    </section>
+
+    <!-- Sección de grupos removida según preferencia del usuario -->
+
+    <section>
+      <h2>Tabla general</h2>
+      <div id="summary"></div>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <small>Admin: <a href="admin.html">página secreta</a></small>
+  </footer>
+</body>
+</html>

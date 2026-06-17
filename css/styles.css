@@ -1,0 +1,47 @@
+:root{--bg:#0b3d91;--accent:#f2b705;--card:#ffffffcc}
+*{box-sizing:border-box;font-family:Inter, system-ui, Arial, sans-serif}
+body{margin:0;background:linear-gradient(180deg,#071a3a 0%,#05264a 100%);color:#fff}
+.container{max-width:1000px;margin:0 auto;padding:20px}
+.hero{padding:24px 0;text-align:center}
+.hero h1{font-size:2.2rem;margin:0}
+.lead{opacity:0.9}
+.controls{display:flex;gap:16px;align-items:flex-end;flex-wrap:wrap;margin-bottom:16px}
+.participants input{margin-right:8px;padding:6px;border-radius:6px;border:0}
+select,input,button{padding:8px;border-radius:6px;border:0}
+/* Alinear texto del selector a la derecha para estética */
+#daySelect{ text-align: right; }
+#daySelect option{ text-align: right; }
+button{cursor:pointer;background:var(--accent);color:#000;font-weight:700}
+.matches{display:grid;grid-template-columns:1fr;gap:18px}
+.match{background:var(--card);color:#000;padding:22px;border-radius:12px;display:flex;flex-direction:column;align-items:center;text-align:center;box-shadow:0 6px 18px rgba(0,0,0,0.18)}
+.teams{display:flex;gap:12px;align-items:center;justify-content:center}
+.team{font-weight:800;font-size:1.4rem}
+.matchTime{font-size:1rem;color:#222;margin-top:6px}
+.score input{width:48px;text-align:center}
+.scoreBadge{display:inline-block;padding:4px 8px;border-radius:6px;font-weight:700;color:#fff;margin-left:8px}
+.scoreZero{background:#b0b0b0}
+.scoreOne{background:#2b7be4}
+.scoreThree{background:#23a455}
+.predictions{display:flex;gap:18px;align-items:flex-start;justify-content:center;margin-top:14px}
+.pred{display:flex;flex-direction:column;align-items:center;gap:6px;padding:6px}
+.pred .predName{font-weight:700}
+.pred .predScore{font-size:1rem}
+.summaryTable{width:100%;border-collapse:collapse;background:#fff;color:#000;border-radius:6px;overflow:hidden}
+.summaryTable th,.summaryTable td{padding:8px;text-align:left;border-bottom:1px solid #eee}
+.footer{padding:12px 0;text-align:center;opacity:0.9}
+.day-label{font-weight:700;margin-right:8px}
+
+/* Mundialista touches */
+header.hero{background:linear-gradient(90deg,rgba(242,183,5,0.12),rgba(255,255,255,0));border-bottom:3px solid rgba(242,183,5,0.12)}
+
+@media(min-width:900px){
+	.matches{grid-template-columns:1fr 1fr}
+	.match{padding:28px}
+	.team{font-size:1.6rem}
+}
+
+@media(max-width:420px){
+	.predictions{flex-direction:column;gap:10px}
+	.match{padding:16px}
+	.team{font-size:1.2rem}
+}

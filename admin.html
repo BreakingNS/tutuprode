@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Prode Mundial - Admin</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+  <script src="js/data.js" defer></script>
+  <script src="js/admin.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <h1>Admin - Cargar resultados</h1>
+    <div id="loginBox">
+      <label>Clave admin:</label>
+      <input id="adminPass" type="password" />
+      <button id="doLogin">Entrar</button>
+    </div>
+
+    <div id="adminPanel" style="display:none">
+      <button id="saveAll">Guardar cambios</button>
+      <h2>Partidos (cargar resultados y predicciones)</h2>
+      <div class="controls">
+        <label>Seleccionar día:</label>
+        <select id="adminDaySelect"></select>
+      </div>
+      <div id="adminMatches"></div>
+    </div>
+  </main>
+</body>
+</html>
