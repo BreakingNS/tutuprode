@@ -90,15 +90,23 @@ document.addEventListener('DOMContentLoaded',()=>{
   }
 
   function computeSummary(){
-    // para cada participante, sumar puntos a través de todos los partidos
-    const res = DB.participants.map(name=>({name, points:0, lastMatch:null}));
+    // para cada participante, calcular: puntos, resultados exactos y aciertos de ganador/empate
+    const res = DB.participants.map(name=>({name, points:0, exactCount:0, outcomeCount:0}));
     DB.matches.forEach(m=>{
       DB.participants.forEach((p,i)=>{
         const pred = (m.preds && m.preds[p]) || null;
         if(pred){
-          const sc = scorePrediction({a:pred.a,b:pred.b}, {scoreA:m.scoreA, scoreB:m.scoreB});
+          const actual = {scoreA:m.scoreA, scoreB:m.scoreB};
+          const sc = scorePrediction({a:pred.a,b:pred.b}, actual);
           res[i].points += sc;
-          if(m.scoreA!==null) res[i].lastMatch = m.id;
+
+          if(actual.scoreA!==null && actual.scoreB!==null){
+            // exacto
+            if(pred.a===actual.scoreA && pred.b===actual.scoreB) res[i].exactCount += 1;
+            // ganador/empate correcto (incluye exactos)
+            const sign = (x,y)=> x>y?1:(x<y?-1:0);
+            if(sign(pred.a,pred.b)===sign(actual.scoreA,actual.scoreB)) res[i].outcomeCount += 1;
+          }
         }
       });
     });
@@ -109,12 +117,12 @@ document.addEventListener('DOMContentLoaded',()=>{
     const s = computeSummary();
     const table = document.createElement('table');table.className='summaryTable';
     const thead = document.createElement('thead');
-    thead.innerHTML='<tr><th>Participante</th><th>Puntos</th><th>Último partido cargado</th></tr>';
+    thead.innerHTML = '<tr><th>Participante</th><th>Resultados correctos</th><th>Ganador/Empate correctos</th><th>Puntos</th></tr>';
     table.appendChild(thead);
     const tbody = document.createElement('tbody');
     s.forEach(r=>{
       const tr=document.createElement('tr');
-      tr.innerHTML=`<td>${r.name}</td><td>${r.points}</td><td>${r.lastMatch?('ID '+r.lastMatch):'-'}</td>`;
+      tr.innerHTML = `<td>${r.name}</td><td>${r.exactCount}</td><td>${r.outcomeCount}</td><td class="points">${r.points}</td>`;
       tbody.appendChild(tr);
     });
     table.appendChild(tbody);
