@@ -183,12 +183,12 @@ const DB = {
       "Lauti":  {a:2, b:3},
       "Naty":   {a:2, b:2}
     }},
-    {id:23, startUtc:"2026-06-17T23:00:00Z", teamA:"Ghana", teamB:"Panama", scoreA:null, scoreB:null, preds:{
+    {id:23, startUtc:"2026-06-17T23:00:00Z", teamA:"Ghana", teamB:"Panama", scoreA:1, scoreB:0, preds:{
       "Nahuel": {a:3, b:1},
       "Lauti":  {a:1, b:1},
       "Naty":   {a:0, b:1}
     }},
-    {id:24, startUtc:"2026-06-18T02:00:00Z", teamA:"Uzbekistan", teamB:"Colombia", scoreA:null, scoreB:null, preds:{
+    {id:24, startUtc:"2026-06-18T02:00:00Z", teamA:"Uzbekistan", teamB:"Colombia", scoreA:1, scoreB:3, preds:{
       "Nahuel": {a:0, b:3},
       "Lauti":  {a:2, b:1},
       "Naty":   {a:0, b:2}
