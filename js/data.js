@@ -194,7 +194,7 @@ const DB = {
       "Naty":   {a:0, b:2}
     }},
     // 18 de Junio
-    {id:25, startUtc:"2026-06-18T16:00:00Z", teamA:"Czechia", teamB:"South Africa", scoreA:null, scoreB:null, preds:{
+    {id:25, startUtc:"2026-06-18T16:00:00Z", teamA:"Czechia", teamB:"South Africa", scoreA:1, scoreB:1, preds:{
       "Nahuel": {a:1, b:2},
       "Lauti":  {a:1, b:2},
       "Naty":   {a:1, b:1}
@@ -410,3 +410,7 @@ loadDB();
 // Forzar participantes fijos (no editables desde index)
 DB.participants = ["Nahuel","Lauti","Naty"];
 saveDB();
+
+// prode7
+// seedVersion: 20260629
+// v=20260618-1
