@@ -199,17 +199,17 @@ const DB = {
       "Lauti":  {a:1, b:2},
       "Naty":   {a:1, b:1}
     }},
-    {id:26, startUtc:"2026-06-18T19:00:00Z", teamA:"Switzerland", teamB:"Bosnia & Herzegovina", scoreA:null, scoreB:null, preds:{
+    {id:26, startUtc:"2026-06-18T19:00:00Z", teamA:"Switzerland", teamB:"Bosnia & Herzegovina", scoreA:4, scoreB:1, preds:{
       "Nahuel": {a:3, b:0},
       "Lauti":  {a:0, b:0},
       "Naty":   {a:3, b:0}
     }},
-    {id:27, startUtc:"2026-06-18T22:00:00Z", teamA:"Canada", teamB:"Qatar", scoreA:null, scoreB:null, preds:{
+    {id:27, startUtc:"2026-06-18T22:00:00Z", teamA:"Canada", teamB:"Qatar", scoreA:6, scoreB:0, preds:{
       "Nahuel": {a:2, b:1},
       "Lauti":  {a:1, b:0},
       "Naty":   {a:2, b:1}
     }},
-    {id:28, startUtc:"2026-06-19T01:00:00Z", teamA:"Mexico", teamB:"Korea Republic", scoreA:null, scoreB:null, preds:{
+    {id:28, startUtc:"2026-06-19T01:00:00Z", teamA:"Mexico", teamB:"Korea Republic", scoreA:1, scoreB:0, preds:{
       "Nahuel": {a:3, b:3},
       "Lauti":  {a:1, b:2},
       "Naty":   {a:2, b:2}
@@ -246,22 +246,74 @@ const DB = {
       "Lauti":  {a:6, b:1},
       "Naty":   {a:4, b:1}
     }},
-    {id:35, startUtc:"2026-06-21T00:00:00Z", teamA:"Ecuador", teamB:"Curaçao", scoreA:null, scoreB:null, preds:{}},
+    {id:35, startUtc:"2026-06-21T00:00:00Z", teamA:"Ecuador", teamB:"Curaçao", scoreA:null, scoreB:null, preds:{
+      "Nahuel": {a:3, b:0},
+      "Lauti":  {a:2, b:0},
+      "Naty":   {a:1, b:0}
+    }},
     // 21 de Junio
-    {id:36, startUtc:"2026-06-21T04:00:00Z", teamA:"Tunisia", teamB:"Japan", scoreA:null, scoreB:null, preds:{}},
-    {id:37, startUtc:"2026-06-21T16:00:00Z", teamA:"Spain", teamB:"Saudi Arabia", scoreA:null, scoreB:null, preds:{}},
-    {id:38, startUtc:"2026-06-21T19:00:00Z", teamA:"Belgium", teamB:"IR Iran", scoreA:null, scoreB:null, preds:{}},
-    {id:39, startUtc:"2026-06-21T22:00:00Z", teamA:"Uruguay", teamB:"Cabo Verde", scoreA:null, scoreB:null, preds:{}},
-    {id:40, startUtc:"2026-06-22T01:00:00Z", teamA:"New Zealand", teamB:"Egypt", scoreA:null, scoreB:null, preds:{}},
+    {id:36, startUtc:"2026-06-21T04:00:00Z", teamA:"Tunisia", teamB:"Japan", scoreA:null, scoreB:null, preds:{
+      "Nahuel": {a:0, b:2},
+      "Lauti":  {a:2, b:3},
+      "Naty":   {a:0, b:2}
+    }},
+    {id:37, startUtc:"2026-06-21T16:00:00Z", teamA:"Spain", teamB:"Saudi Arabia", scoreA:null, scoreB:null, preds:{
+      "Nahuel": {a:4, b:1},
+      "Lauti":  {a:5, b:2},
+      "Naty":   {a:2, b:1}
+    }},
+    {id:38, startUtc:"2026-06-21T19:00:00Z", teamA:"Belgium", teamB:"IR Iran", scoreA:null, scoreB:null, preds:{
+      "Nahuel": {a:2, b:1},
+      "Lauti":  {a:2, b:1},
+      "Naty":   {a:1, b:1}
+    }},
+    {id:39, startUtc:"2026-06-21T22:00:00Z", teamA:"Uruguay", teamB:"Cabo Verde", scoreA:null, scoreB:null, preds:{
+      "Nahuel": {a:3, b:0},
+      "Lauti":  {a:4, b:2},
+      "Naty":   {a:1, b:0}
+    }},
+    {id:40, startUtc:"2026-06-22T01:00:00Z", teamA:"New Zealand", teamB:"Egypt", scoreA:null, scoreB:null, preds:{
+      "Nahuel": {a:1, b:0},
+      "Lauti":  {a:2, b:3},
+      "Naty":   {a:2, b:1}
+    }},
     // 22 de Junio
-    {id:41, startUtc:"2026-06-22T17:00:00Z", teamA:"Argentina", teamB:"Austria", scoreA:null, scoreB:null, preds:{}},
-    {id:42, startUtc:"2026-06-22T21:00:00Z", teamA:"France", teamB:"Iraq", scoreA:null, scoreB:null, preds:{}},
-    {id:43, startUtc:"2026-06-23T00:00:00Z", teamA:"Norway", teamB:"Senegal", scoreA:null, scoreB:null, preds:{}},
+    {id:41, startUtc:"2026-06-22T17:00:00Z", teamA:"Argentina", teamB:"Austria", scoreA:null, scoreB:null, preds:{
+      "Nahuel": {a:2, b:1},
+      "Lauti":  {a:2, b:1},
+      "Naty":   {a:3, b:1}
+    }},
+    {id:42, startUtc:"2026-06-22T21:00:00Z", teamA:"France", teamB:"Iraq", scoreA:null, scoreB:null, preds:{
+      "Nahuel": {a:5, b:1},
+      "Lauti":  {a:7, b:1},
+      "Naty":   {a:3, b:1}
+    }},
+    {id:43, startUtc:"2026-06-23T00:00:00Z", teamA:"Norway", teamB:"Senegal", scoreA:null, scoreB:null, preds:{
+      "Nahuel": {a:0, b:2},
+      "Lauti":  {a:3, b:1},
+      "Naty":   {a:3, b:1}
+    }},
     // 23 de Junio
-    {id:44, startUtc:"2026-06-23T03:00:00Z", teamA:"Jordan", teamB:"Algeria", scoreA:null, scoreB:null, preds:{}},
-    {id:45, startUtc:"2026-06-23T17:00:00Z", teamA:"Portugal", teamB:"Uzbekistan", scoreA:null, scoreB:null, preds:{}},
-    {id:46, startUtc:"2026-06-23T20:00:00Z", teamA:"England", teamB:"Ghana", scoreA:null, scoreB:null, preds:{}},
-    {id:47, startUtc:"2026-06-23T23:00:00Z", teamA:"Panama", teamB:"Croatia", scoreA:null, scoreB:null, preds:{}},
+    {id:44, startUtc:"2026-06-23T03:00:00Z", teamA:"Jordan", teamB:"Algeria", scoreA:null, scoreB:null, preds:{
+      "Nahuel": {a:2, b:2},
+      "Lauti":  {a:0, b:0},
+      "Naty":   {a:0, b:0}
+    }},
+    {id:45, startUtc:"2026-06-23T17:00:00Z", teamA:"Portugal", teamB:"Uzbekistan", scoreA:null, scoreB:null, preds:{
+      "Nahuel": {a:4, b:0},
+      "Lauti":  {a:7, b:3},
+      "Naty":   {a:1, b:0}
+    }},
+    {id:46, startUtc:"2026-06-23T20:00:00Z", teamA:"England", teamB:"Ghana", scoreA:null, scoreB:null, preds:{
+      "Nahuel": {a:3, b:0},
+      "Lauti":  {a:7, b:1},
+      "Naty":   {a:3, b:1}
+    }},
+    {id:47, startUtc:"2026-06-23T23:00:00Z", teamA:"Panama", teamB:"Croatia", scoreA:null, scoreB:null, preds:{
+      "Nahuel": {a:2, b:3},
+      "Lauti":  {a:2, b:3},
+      "Naty":   {a:0, b:2}
+    }},
     {id:48, startUtc:"2026-06-24T02:00:00Z", teamA:"Colombia", teamB:"Congo DR", scoreA:null, scoreB:null, preds:{}},
     {id:49, startUtc:"2026-06-24T19:00:00Z", teamA:"Switzerland", teamB:"Canada", scoreA:null, scoreB:null, preds:{}},
     {id:50, startUtc:"2026-06-24T19:00:00Z", teamA:"Bosnia & Herzegovina", teamB:"Qatar", scoreA:null, scoreB:null, preds:{}},
@@ -411,6 +463,6 @@ loadDB();
 DB.participants = ["Nahuel","Lauti","Naty"];
 saveDB();
 
-// prode7
-// seedVersion: 20260629
-// v=20260618-1
+// prode8
+// seedVersion: 20260631
+// v=20260618-2
