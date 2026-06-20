@@ -378,7 +378,7 @@ const DB = {
   // para forzar que los clientes actualicen su localStorage con esta versión.
   // Aumenta este número en cada deploy para forzar que los navegadores
   // sobrescriban su `localStorage.prode_db` con el bundle nuevo.
-  seedVersion: 20260637,
+  seedVersion: 20260639,
   // Si querés sincronizar en la nube, pegá aquí la configuración de Firebase (web app)
   // Este objeto fue copiado desde Firebase console (SDK setup). Se usa tal cual.
   // Firebase deshabilitado (usás Netlify desplegando los archivos estáticos)
@@ -464,5 +464,5 @@ DB.participants = ["Nahuel","Lauti","Naty"];
 saveDB();
 
 // prode11
-// seedVersion: 20260637
-// v=20260618-5
+// seedVersion: 20260639
+// v=20260618-6

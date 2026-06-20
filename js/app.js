@@ -84,9 +84,13 @@ document.addEventListener('DOMContentLoaded',()=>{
   function scorePrediction(pred, actual){
     if(actual.scoreA===null || actual.scoreB===null) return 0;
     const a = actual.scoreA, b = actual.scoreB;
-    if(pred.a===a && pred.b===b) return 3;
+    // Normalizar predicciones a números
+    const pa = Number(pred.a);
+    const pb = Number(pred.b);
+    if(Number.isNaN(pa) || Number.isNaN(pb)) return 0;
+    if(pa === a && pb === b) return 3;
     const sign = (x,y)=> x>y?1:(x<y?-1:0);
-    return sign(pred.a,pred.b)===sign(a,b)?1:0;
+    return sign(pa,pb)===sign(a,b)?1:0;
   }
 
   function computeSummary(){
@@ -101,16 +105,24 @@ document.addEventListener('DOMContentLoaded',()=>{
         const actualB = m.scoreB;
         if(actualA===null || actualB===null) return;
 
-        // detectar exacto (usar comparación laxa para tolerar strings/números)
-        if(pred.a == actualA && pred.b == actualB) res[i].exactCount += 1;
+        // Normalizar valores a número para comparaciones seguras
+        const pa = Number(pred.a);
+        const pb = Number(pred.b);
+        if(Number.isNaN(pa) || Number.isNaN(pb)) return;
 
+        // exacto
+        const isExact = (pa === actualA && pb === actualB);
+        if(isExact) res[i].exactCount += 1;
+
+        // ganador/empate correcto pero NO contar los exactos aquí (se registran por separado)
         const sign = (x,y)=> x>y?1:(x<y?-1:0);
-        if(sign(pred.a,pred.b) === sign(actualA, actualB)) res[i].outcomeCount += 1;
+        const isSameOutcome = sign(pa,pb) === sign(actualA, actualB);
+        if(isSameOutcome && !isExact) res[i].outcomeCount += 1;
       });
     });
 
-    // derivar puntos a partir de los conteos: cada acierto de signo vale 1, y cada exacto suma 2 adicionales (total 3)
-    res.forEach(r=>{ r.points = r.outcomeCount + (r.exactCount * 2); });
+    // derivar puntos: exacto = 3 puntos, acierto de ganador/empate (no exacto) = 1 punto
+    res.forEach(r=>{ r.points = (r.exactCount * 3) + (r.outcomeCount * 1); });
     return res.sort((a,b)=>b.points-a.points);
   }
 
