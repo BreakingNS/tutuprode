@@ -231,17 +231,17 @@ const DB = {
       "Naty":   {a:2, b:0}
     }},
     // 20 de Junio
-    {id:32, startUtc:"2026-06-20T04:00:00Z", teamA:"Türkiye", teamB:"Paraguay", scoreA:null, scoreB:null, preds:{
+    {id:32, startUtc:"2026-06-20T04:00:00Z", teamA:"Türkiye", teamB:"Paraguay", scoreA:0, scoreB:1, preds:{
       "Nahuel": {a:1, b:1},
       "Lauti":  {a:2, b:1},
       "Naty":   {a:0, b:1}
     }},
-    {id:33, startUtc:"2026-06-20T17:00:00Z", teamA:"Netherlands", teamB:"Sweden", scoreA:null, scoreB:null, preds:{
+    {id:33, startUtc:"2026-06-20T17:00:00Z", teamA:"Netherlands", teamB:"Sweden", scoreA:5, scoreB:1, preds:{
       "Nahuel": {a:3, b:2},
       "Lauti":  {a:3, b:2},
       "Naty":   {a:2, b:3}
     }},
-    {id:34, startUtc:"2026-06-20T20:00:00Z", teamA:"Germany", teamB:"Côte d'Ivoire", scoreA:null, scoreB:null, preds:{
+    {id:34, startUtc:"2026-06-20T20:00:00Z", teamA:"Germany", teamB:"Côte d'Ivoire", scoreA:2, scoreB:1, preds:{
       "Nahuel": {a:3, b:2},
       "Lauti":  {a:6, b:1},
       "Naty":   {a:4, b:1}
@@ -378,7 +378,7 @@ const DB = {
   // para forzar que los clientes actualicen su localStorage con esta versión.
   // Aumenta este número en cada deploy para forzar que los navegadores
   // sobrescriban su `localStorage.prode_db` con el bundle nuevo.
-  seedVersion: 20260633,
+  seedVersion: 20260635,
   // Si querés sincronizar en la nube, pegá aquí la configuración de Firebase (web app)
   // Este objeto fue copiado desde Firebase console (SDK setup). Se usa tal cual.
   // Firebase deshabilitado (usás Netlify desplegando los archivos estáticos)
@@ -463,6 +463,6 @@ loadDB();
 DB.participants = ["Nahuel","Lauti","Naty"];
 saveDB();
 
-// prode9
-// seedVersion: 20260633
-// v=20260618-3
+// prode10
+// seedVersion: 20260635
+// v=20260618-4
