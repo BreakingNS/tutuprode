@@ -90,26 +90,27 @@ document.addEventListener('DOMContentLoaded',()=>{
   }
 
   function computeSummary(){
-    // para cada participante, calcular: puntos, resultados exactos y aciertos de ganador/empate
+    // para cada participante, calcular: resultados exactos y aciertos de ganador/empate
+    // y derivar puntos con la fórmula: puntos = outcomeCount + exactCount*2
     const res = DB.participants.map(name=>({name, points:0, exactCount:0, outcomeCount:0}));
     DB.matches.forEach(m=>{
       DB.participants.forEach((p,i)=>{
         const pred = (m.preds && m.preds[p]) || null;
-        if(pred){
-          const actual = {scoreA:m.scoreA, scoreB:m.scoreB};
-          const sc = scorePrediction({a:pred.a,b:pred.b}, actual);
-          res[i].points += sc;
+        if(!pred) return;
+        const actualA = m.scoreA;
+        const actualB = m.scoreB;
+        if(actualA===null || actualB===null) return;
 
-          if(actual.scoreA!==null && actual.scoreB!==null){
-            // exacto
-            if(pred.a===actual.scoreA && pred.b===actual.scoreB) res[i].exactCount += 1;
-            // ganador/empate correcto (incluye exactos)
-            const sign = (x,y)=> x>y?1:(x<y?-1:0);
-            if(sign(pred.a,pred.b)===sign(actual.scoreA,actual.scoreB)) res[i].outcomeCount += 1;
-          }
-        }
+        // detectar exacto (usar comparación laxa para tolerar strings/números)
+        if(pred.a == actualA && pred.b == actualB) res[i].exactCount += 1;
+
+        const sign = (x,y)=> x>y?1:(x<y?-1:0);
+        if(sign(pred.a,pred.b) === sign(actualA, actualB)) res[i].outcomeCount += 1;
       });
     });
+
+    // derivar puntos a partir de los conteos: cada acierto de signo vale 1, y cada exacto suma 2 adicionales (total 3)
+    res.forEach(r=>{ r.points = r.outcomeCount + (r.exactCount * 2); });
     return res.sort((a,b)=>b.points-a.points);
   }
 
