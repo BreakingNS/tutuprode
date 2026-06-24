@@ -278,33 +278,33 @@ const DB = {
       "Naty":   {a:2, b:1}
     }},
     // 22 de Junio
-    {id:41, startUtc:"2026-06-22T17:00:00Z", teamA:"Argentina", teamB:"Austria", scoreA:null, scoreB:null, preds:{
+    {id:41, startUtc:"2026-06-22T17:00:00Z", teamA:"Argentina", teamB:"Austria", scoreA:2, scoreB:0, preds:{
       "Nahuel": {a:2, b:1},
       "Lauti":  {a:2, b:1},
       "Naty":   {a:3, b:1}
     }},
-    {id:42, startUtc:"2026-06-22T21:00:00Z", teamA:"France", teamB:"Iraq", scoreA:null, scoreB:null, preds:{
+    {id:42, startUtc:"2026-06-22T21:00:00Z", teamA:"France", teamB:"Iraq", scoreA:3, scoreB:0, preds:{
       "Nahuel": {a:5, b:1},
       "Lauti":  {a:7, b:1},
       "Naty":   {a:3, b:1}
     }},
-    {id:43, startUtc:"2026-06-23T00:00:00Z", teamA:"Norway", teamB:"Senegal", scoreA:null, scoreB:null, preds:{
+    {id:43, startUtc:"2026-06-23T00:00:00Z", teamA:"Norway", teamB:"Senegal", scoreA:3, scoreB:2, preds:{
       "Nahuel": {a:0, b:2},
       "Lauti":  {a:3, b:1},
       "Naty":   {a:3, b:1}
     }},
     // 23 de Junio
-    {id:44, startUtc:"2026-06-23T03:00:00Z", teamA:"Jordan", teamB:"Algeria", scoreA:null, scoreB:null, preds:{
+    {id:44, startUtc:"2026-06-23T03:00:00Z", teamA:"Jordan", teamB:"Algeria", scoreA:1, scoreB:2, preds:{
       "Nahuel": {a:2, b:2},
       "Lauti":  {a:0, b:0},
       "Naty":   {a:0, b:0}
     }},
-    {id:45, startUtc:"2026-06-23T17:00:00Z", teamA:"Portugal", teamB:"Uzbekistan", scoreA:null, scoreB:null, preds:{
+    {id:45, startUtc:"2026-06-23T17:00:00Z", teamA:"Portugal", teamB:"Uzbekistan", scoreA:5, scoreB:0, preds:{
       "Nahuel": {a:4, b:0},
       "Lauti":  {a:7, b:3},
       "Naty":   {a:1, b:0}
     }},
-    {id:46, startUtc:"2026-06-23T20:00:00Z", teamA:"England", teamB:"Ghana", scoreA:null, scoreB:null, preds:{
+    {id:46, startUtc:"2026-06-23T20:00:00Z", teamA:"England", teamB:"Ghana", scoreA:0, scoreB:0, preds:{
       "Nahuel": {a:3, b:0},
       "Lauti":  {a:7, b:1},
       "Naty":   {a:3, b:1}
@@ -314,23 +314,91 @@ const DB = {
       "Lauti":  {a:2, b:3},
       "Naty":   {a:0, b:2}
     }},
-    {id:48, startUtc:"2026-06-24T02:00:00Z", teamA:"Colombia", teamB:"Congo DR", scoreA:null, scoreB:null, preds:{}},
-    {id:49, startUtc:"2026-06-24T19:00:00Z", teamA:"Switzerland", teamB:"Canada", scoreA:null, scoreB:null, preds:{}},
-    {id:50, startUtc:"2026-06-24T19:00:00Z", teamA:"Bosnia & Herzegovina", teamB:"Qatar", scoreA:null, scoreB:null, preds:{}},
-    {id:51, startUtc:"2026-06-24T22:00:00Z", teamA:"Scotland", teamB:"Brazil", scoreA:null, scoreB:null, preds:{}},
-    {id:52, startUtc:"2026-06-24T22:00:00Z", teamA:"Morocco", teamB:"Haiti", scoreA:null, scoreB:null, preds:{}},
-    {id:53, startUtc:"2026-06-25T01:00:00Z", teamA:"Czechia", teamB:"Mexico", scoreA:null, scoreB:null, preds:{}},
-    {id:54, startUtc:"2026-06-25T01:00:00Z", teamA:"South Africa", teamB:"Korea Republic", scoreA:null, scoreB:null, preds:{}},
-    {id:55, startUtc:"2026-06-25T20:00:00Z", teamA:"Curaçao", teamB:"Côte d'Ivoire", scoreA:null, scoreB:null, preds:{}},
-    {id:56, startUtc:"2026-06-25T20:00:00Z", teamA:"Ecuador", teamB:"Germany", scoreA:null, scoreB:null, preds:{}},
-    {id:57, startUtc:"2026-06-25T23:00:00Z", teamA:"Japan", teamB:"Sweden", scoreA:null, scoreB:null, preds:{}},
-    {id:58, startUtc:"2026-06-25T23:00:00Z", teamA:"Tunisia", teamB:"Netherlands", scoreA:null, scoreB:null, preds:{}},
-    {id:59, startUtc:"2026-06-26T02:00:00Z", teamA:"Türkiye", teamB:"USA", scoreA:null, scoreB:null, preds:{}},
-    {id:60, startUtc:"2026-06-26T02:00:00Z", teamA:"Paraguay", teamB:"Australia", scoreA:null, scoreB:null, preds:{}},
-    {id:61, startUtc:"2026-06-26T19:00:00Z", teamA:"Norway", teamB:"France", scoreA:null, scoreB:null, preds:{}},
-    {id:62, startUtc:"2026-06-26T19:00:00Z", teamA:"Senegal", teamB:"Iraq", scoreA:null, scoreB:null, preds:{}},
-    {id:63, startUtc:"2026-06-27T00:00:00Z", teamA:"Cabo Verde", teamB:"Saudi Arabia", scoreA:null, scoreB:null, preds:{}},
-    {id:64, startUtc:"2026-06-27T00:00:00Z", teamA:"Uruguay", teamB:"Spain", scoreA:null, scoreB:null, preds:{}},
+    {id:48, startUtc:"2026-06-24T02:00:00Z", teamA:"Colombia", teamB:"Congo DR", scoreA:null, scoreB:null, preds:{
+      "Nahuel": {a:3, b:0},
+      "Lauti":  {a:2, b:1},
+      "Naty":   {a:2, b:1}
+    }},
+    {id:49, startUtc:"2026-06-24T19:00:00Z", teamA:"Switzerland", teamB:"Canada", scoreA:null, scoreB:null, preds:{
+      "Nahuel": {a:2, b:0},
+      "Lauti":  {a:1, b:2},
+      "Naty":   {a:2, b:2}
+    }},
+    {id:50, startUtc:"2026-06-24T19:00:00Z", teamA:"Bosnia & Herzegovina", teamB:"Qatar", scoreA:null, scoreB:null, preds:{
+      "Nahuel": {a:2, b:0},
+      "Lauti":  {a:1, b:0},
+      "Naty":   {a:1, b:1}
+    }},
+    {id:51, startUtc:"2026-06-24T22:00:00Z", teamA:"Scotland", teamB:"Brazil", scoreA:null, scoreB:null, preds:{
+      "Nahuel": {a:1, b:3},
+      "Lauti":  {a:1, b:2},
+      "Naty":   {a:1, b:3}
+    }},
+    {id:52, startUtc:"2026-06-24T22:00:00Z", teamA:"Morocco", teamB:"Haiti", scoreA:null, scoreB:null, preds:{
+      "Nahuel": {a:4, b:0},
+      "Lauti":  {a:2, b:0},
+      "Naty":   {a:1, b:0}
+    }},
+    {id:53, startUtc:"2026-06-25T01:00:00Z", teamA:"Czechia", teamB:"Mexico", scoreA:null, scoreB:null, preds:{
+      "Nahuel": {a:2, b:2},
+      "Lauti":  {a:0, b:2},
+      "Naty":   {a:1, b:3}
+    }},
+    {id:54, startUtc:"2026-06-25T01:00:00Z", teamA:"South Africa", teamB:"Korea Republic", scoreA:null, scoreB:null, preds:{
+      "Nahuel": {a:2, b:1},
+      "Lauti":  {a:0, b:2},
+      "Naty":   {a:1, b:3}
+    }},
+    {id:55, startUtc:"2026-06-25T20:00:00Z", teamA:"Curaçao", teamB:"Côte d'Ivoire", scoreA:null, scoreB:null, preds:{
+      "Nahuel": {a:0, b:3},
+      "Lauti":  {a:0, b:1},
+      "Naty":   {a:1, b:1}
+    }},
+    {id:56, startUtc:"2026-06-25T20:00:00Z", teamA:"Ecuador", teamB:"Germany", scoreA:null, scoreB:null, preds:{
+      "Nahuel": {a:1, b:4},
+      "Lauti":  {a:2, b:3},
+      "Naty":   {a:0, b:4}
+    }},
+    {id:57, startUtc:"2026-06-25T23:00:00Z", teamA:"Japan", teamB:"Sweden", scoreA:null, scoreB:null, preds:{
+      "Nahuel": {a:2, b:0},
+      "Lauti":  {a:1, b:0},
+      "Naty":   {a:3, b:2}
+    }},
+    {id:58, startUtc:"2026-06-25T23:00:00Z", teamA:"Tunisia", teamB:"Netherlands", scoreA:null, scoreB:null, preds:{
+      "Nahuel": {a:0, b:4},
+      "Lauti":  {a:0, b:2},
+      "Naty":   {a:0, b:3}
+    }},
+    {id:59, startUtc:"2026-06-26T02:00:00Z", teamA:"Türkiye", teamB:"USA", scoreA:null, scoreB:null, preds:{
+      "Nahuel": {a:1, b:3},
+      "Lauti":  {a:1, b:1},
+      "Naty":   {a:0, b:3}
+    }},
+    {id:60, startUtc:"2026-06-26T02:00:00Z", teamA:"Paraguay", teamB:"Australia", scoreA:null, scoreB:null, preds:{
+      "Nahuel": {a:1, b:3},
+      "Lauti":  {a:0, b:0},
+      "Naty":   {a:1, b:1}
+    }},
+    {id:61, startUtc:"2026-06-26T19:00:00Z", teamA:"Norway", teamB:"France", scoreA:null, scoreB:null, preds:{
+      "Nahuel": {a:1, b:3},
+      "Lauti":  {a:1, b:2},
+      "Naty":   {a:3, b:3}
+    }},
+    {id:62, startUtc:"2026-06-26T19:00:00Z", teamA:"Senegal", teamB:"Iraq", scoreA:null, scoreB:null, preds:{
+      "Nahuel": {a:0, b:0},
+      "Lauti":  {a:1, b:0},
+      "Naty":   {a:1, b:1}
+    }},
+    {id:63, startUtc:"2026-06-27T00:00:00Z", teamA:"Cabo Verde", teamB:"Saudi Arabia", scoreA:null, scoreB:null, preds:{
+      "Nahuel": {a:1, b:3},
+      "Lauti":  {a:1, b:2},
+      "Naty":   {a:2, b:1}
+    }},
+    {id:64, startUtc:"2026-06-27T00:00:00Z", teamA:"Uruguay", teamB:"Spain", scoreA:null, scoreB:null, preds:{
+      "Nahuel": {a:1, b:2},
+      "Lauti":  {a:1, b:1},
+      "Naty":   {a:2, b:2}
+    }},
     {id:65, startUtc:"2026-06-27T03:00:00Z", teamA:"Egypt", teamB:"IR Iran", scoreA:null, scoreB:null, preds:{}},
     {id:66, startUtc:"2026-06-27T03:00:00Z", teamA:"New Zealand", teamB:"Belgium", scoreA:null, scoreB:null, preds:{}},
     {id:67, startUtc:"2026-06-27T21:00:00Z", teamA:"Panama", teamB:"England", scoreA:null, scoreB:null, preds:{}},
@@ -378,7 +446,7 @@ const DB = {
   // para forzar que los clientes actualicen su localStorage con esta versión.
   // Aumenta este número en cada deploy para forzar que los navegadores
   // sobrescriban su `localStorage.prode_db` con el bundle nuevo.
-  seedVersion: 20260641,
+  seedVersion: 20260643,
   // Si querés sincronizar en la nube, pegá aquí la configuración de Firebase (web app)
   // Este objeto fue copiado desde Firebase console (SDK setup). Se usa tal cual.
   // Firebase deshabilitado (usás Netlify desplegando los archivos estáticos)
@@ -463,6 +531,6 @@ loadDB();
 DB.participants = ["Nahuel","Lauti","Naty"];
 saveDB();
 
-// prode12
-// seedVersion: 20260641
-// v=20260618-7
+// prode13
+// seedVersion: 20260643
+// v=20260618-8
