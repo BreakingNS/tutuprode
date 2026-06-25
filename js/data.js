@@ -319,32 +319,32 @@ const DB = {
       "Lauti":  {a:2, b:1},
       "Naty":   {a:2, b:1}
     }},
-    {id:49, startUtc:"2026-06-24T19:00:00Z", teamA:"Switzerland", teamB:"Canada", scoreA:null, scoreB:null, preds:{
+    {id:49, startUtc:"2026-06-24T19:00:00Z", teamA:"Switzerland", teamB:"Canada", scoreA:2, scoreB:1, preds:{
       "Nahuel": {a:2, b:0},
       "Lauti":  {a:1, b:2},
       "Naty":   {a:2, b:2}
     }},
-    {id:50, startUtc:"2026-06-24T19:00:00Z", teamA:"Bosnia & Herzegovina", teamB:"Qatar", scoreA:null, scoreB:null, preds:{
+    {id:50, startUtc:"2026-06-24T19:00:00Z", teamA:"Bosnia & Herzegovina", teamB:"Qatar", scoreA:3, scoreB:1, preds:{
       "Nahuel": {a:2, b:0},
       "Lauti":  {a:1, b:0},
       "Naty":   {a:1, b:1}
     }},
-    {id:51, startUtc:"2026-06-24T22:00:00Z", teamA:"Scotland", teamB:"Brazil", scoreA:null, scoreB:null, preds:{
+    {id:51, startUtc:"2026-06-24T22:00:00Z", teamA:"Scotland", teamB:"Brazil", scoreA:0, scoreB:3, preds:{
       "Nahuel": {a:1, b:3},
       "Lauti":  {a:1, b:2},
       "Naty":   {a:1, b:3}
     }},
-    {id:52, startUtc:"2026-06-24T22:00:00Z", teamA:"Morocco", teamB:"Haiti", scoreA:null, scoreB:null, preds:{
+    {id:52, startUtc:"2026-06-24T22:00:00Z", teamA:"Morocco", teamB:"Haiti", scoreA:4, scoreB:2, preds:{
       "Nahuel": {a:4, b:0},
       "Lauti":  {a:2, b:0},
       "Naty":   {a:1, b:0}
     }},
-    {id:53, startUtc:"2026-06-25T01:00:00Z", teamA:"Czechia", teamB:"Mexico", scoreA:null, scoreB:null, preds:{
+    {id:53, startUtc:"2026-06-25T01:00:00Z", teamA:"Czechia", teamB:"Mexico", scoreA:0, scoreB:3, preds:{
       "Nahuel": {a:2, b:2},
       "Lauti":  {a:0, b:2},
       "Naty":   {a:1, b:3}
     }},
-    {id:54, startUtc:"2026-06-25T01:00:00Z", teamA:"South Africa", teamB:"Korea Republic", scoreA:null, scoreB:null, preds:{
+    {id:54, startUtc:"2026-06-25T01:00:00Z", teamA:"South Africa", teamB:"Korea Republic", scoreA:1, scoreB:0, preds:{
       "Nahuel": {a:2, b:1},
       "Lauti":  {a:0, b:2},
       "Naty":   {a:1, b:3}
@@ -446,7 +446,7 @@ const DB = {
   // para forzar que los clientes actualicen su localStorage con esta versión.
   // Aumenta este número en cada deploy para forzar que los navegadores
   // sobrescriban su `localStorage.prode_db` con el bundle nuevo.
-  seedVersion: 20260645,
+  seedVersion: 20260647,
   // Si querés sincronizar en la nube, pegá aquí la configuración de Firebase (web app)
   // Este objeto fue copiado desde Firebase console (SDK setup). Se usa tal cual.
   // Firebase deshabilitado (usás Netlify desplegando los archivos estáticos)
@@ -531,6 +531,6 @@ loadDB();
 DB.participants = ["Nahuel","Lauti","Naty"];
 saveDB();
 
-// prode14
-// seedVersion: 20260645
-// v=20260618-9
+// prode15
+// seedVersion: 20260647
+// v=20260618-10
