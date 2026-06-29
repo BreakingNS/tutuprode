@@ -449,7 +449,7 @@ const DB = {
       "Lauti":  {a:1, b:3},
       "Naty":   {a:1, b:4}
     }},
-    {id:74, startUtc:"2026-06-29T17:00:00Z", teamA:"Brazil", teamB:"Japan", scoreA:null, scoreB:null, preds:{
+    {id:74, startUtc:"2026-06-29T17:00:00Z", teamA:"Brazil", teamB:"Japan", scoreA:2, scoreB:1, preds:{
       "Nahuel": {a:2, b:0},
       "Lauti":  {a:5, b:3},
       "Naty":   {a:2, b:2}
@@ -504,7 +504,7 @@ const DB = {
   // para forzar que los clientes actualicen su localStorage con esta versión.
   // Aumenta este número en cada deploy para forzar que los navegadores
   // sobrescriban su `localStorage.prode_db` con el bundle nuevo.
-  seedVersion: 20260655,
+  seedVersion: 20260657,
   // Si querés sincronizar en la nube, pegá aquí la configuración de Firebase (web app)
   // Este objeto fue copiado desde Firebase console (SDK setup). Se usa tal cual.
   // Firebase deshabilitado (usás Netlify desplegando los archivos estáticos)
@@ -589,6 +589,6 @@ loadDB();
 DB.participants = ["Nahuel","Lauti","Naty"];
 saveDB();
 
-// prode19
-// seedVersion: 20260655
-// v=20260618-14
+// prode20
+// seedVersion: 20260657
+// v=20260618-15
