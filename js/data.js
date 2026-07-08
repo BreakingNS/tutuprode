@@ -532,37 +532,37 @@ const DB = {
       "Lauti":  {a:0, b:2},
       "Naty":   {a:1, b:1}
     }},
-    {id:90, startUtc:"2026-07-04T21:00:00Z", teamA:"Paraguay", teamB:"France", scoreA:null, scoreB:null, preds:{
+    {id:90, startUtc:"2026-07-04T21:00:00Z", teamA:"Paraguay", teamB:"France", scoreA:0, scoreB:1, preds:{
       "Nahuel": {a:2, b:1},
       "Lauti":  {a:1, b:3},
       "Naty":   {a:1, b:2}
     }},
-    {id:91, startUtc:"2026-07-05T20:00:00Z", teamA:"Brazil", teamB:"Norway", scoreA:null, scoreB:null, preds:{
+    {id:91, startUtc:"2026-07-05T20:00:00Z", teamA:"Brazil", teamB:"Norway", scoreA:1, scoreB:2, preds:{
       "Nahuel": {a:2, b:2},
       "Lauti":  {a:2, b:1},
       "Naty":   {a:2, b:2}
     }},
-    {id:92, startUtc:"2026-07-06T00:00:00Z", teamA:"Mexico", teamB:"England", scoreA:null, scoreB:null, preds:{
+    {id:92, startUtc:"2026-07-06T00:00:00Z", teamA:"Mexico", teamB:"England", scoreA:2, scoreB:3, preds:{
       "Nahuel": {a:1, b:3},
       "Lauti":  {a:1, b:3},
       "Naty":   {a:2, b:2}
     }},
-    {id:93, startUtc:"2026-07-06T19:00:00Z", teamA:"Portugal", teamB:"Spain", scoreA:null, scoreB:null, preds:{
+    {id:93, startUtc:"2026-07-06T19:00:00Z", teamA:"Portugal", teamB:"Spain", scoreA:0, scoreB:1, preds:{
       "Nahuel": {a:1, b:1},
       "Lauti":  {a:2, b:4},
       "Naty":   {a:1, b:2}
     }},
-    {id:94, startUtc:"2026-07-07T00:00:00Z", teamA:"USA", teamB:"Belgium", scoreA:null, scoreB:null, preds:{
+    {id:94, startUtc:"2026-07-07T00:00:00Z", teamA:"USA", teamB:"Belgium", scoreA:1, scoreB:4, preds:{
       "Nahuel": {a:1, b:2},
       "Lauti":  {a:3, b:2},
       "Naty":   {a:1, b:1}
     }},
-    {id:95, startUtc:"2026-07-07T16:00:00Z", teamA:"Argentina", teamB:"Egypt", scoreA:null, scoreB:null, preds:{
+    {id:95, startUtc:"2026-07-07T16:00:00Z", teamA:"Argentina", teamB:"Egypt", scoreA:3, scoreB:2, preds:{
       "Nahuel": {a:3, b:1},
       "Lauti":  {a:3, b:2},
       "Naty":   {a:2, b:1}
     }},
-    {id:96, startUtc:"2026-07-07T20:00:00Z", teamA:"Switzerland", teamB:"Colombia", scoreA:null, scoreB:null, preds:{
+    {id:96, startUtc:"2026-07-07T20:00:00Z", teamA:"Switzerland", teamB:"Colombia", scoreA:0, scoreB:0, preds:{
       "Nahuel": {a:0, b:0},
       "Lauti":  {a:0, b:1},
       "Naty":   {a:1, b:1}
@@ -570,10 +570,10 @@ const DB = {
     
     // Eliminatorias de 8
 
-    {id:97, startUtc:"2026-07-09T20:00:00Z", teamA:"W89", teamB:"W90", scoreA:null, scoreB:null, preds:{}},
-    {id:98, startUtc:"2026-07-10T19:00:00Z", teamA:"W93", teamB:"W94", scoreA:null, scoreB:null, preds:{}},
-    {id:99, startUtc:"2026-07-11T21:00:00Z", teamA:"W91", teamB:"W92", scoreA:null, scoreB:null, preds:{}},
-    {id:100, startUtc:"2026-07-12T01:00:00Z", teamA:"W95", teamB:"W96", scoreA:null, scoreB:null, preds:{}},
+    {id:97, startUtc:"2026-07-09T20:00:00Z", teamA:"France", teamB:"Morocco", scoreA:null, scoreB:null, preds:{}},
+    {id:98, startUtc:"2026-07-10T19:00:00Z", teamA:"Spain", teamB:"Belgium", scoreA:null, scoreB:null, preds:{}},
+    {id:99, startUtc:"2026-07-11T21:00:00Z", teamA:"Norway", teamB:"England", scoreA:null, scoreB:null, preds:{}},
+    {id:100, startUtc:"2026-07-12T01:00:00Z", teamA:"Argentina", teamB:"Switzerland", scoreA:null, scoreB:null, preds:{}},
     
     // Semifinales
 
@@ -588,7 +588,7 @@ const DB = {
   // para forzar que los clientes actualicen su localStorage con esta versión.
   // Aumenta este número en cada deploy para forzar que los navegadores
   // sobrescriban su `localStorage.prode_db` con el bundle nuevo.
-  seedVersion: 20260661,
+  seedVersion: 20260663,
   // Si querés sincronizar en la nube, pegá aquí la configuración de Firebase (web app)
   // Este objeto fue copiado desde Firebase console (SDK setup). Se usa tal cual.
   // Firebase deshabilitado (usás Netlify desplegando los archivos estáticos)
@@ -673,6 +673,6 @@ loadDB();
 DB.participants = ["Nahuel","Lauti","Naty"];
 saveDB();
 
-// prode22
-// seedVersion: 20260661
-// v=20260618-17
+// prode23
+// seedVersion: 20260663
+// v=20260618-18
