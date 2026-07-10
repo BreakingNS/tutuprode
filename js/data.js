@@ -570,10 +570,26 @@ const DB = {
     
     // Eliminatorias de 8
 
-    {id:97, startUtc:"2026-07-09T20:00:00Z", teamA:"France", teamB:"Morocco", scoreA:null, scoreB:null, preds:{}},
-    {id:98, startUtc:"2026-07-10T19:00:00Z", teamA:"Spain", teamB:"Belgium", scoreA:null, scoreB:null, preds:{}},
-    {id:99, startUtc:"2026-07-11T21:00:00Z", teamA:"Norway", teamB:"England", scoreA:null, scoreB:null, preds:{}},
-    {id:100, startUtc:"2026-07-12T01:00:00Z", teamA:"Argentina", teamB:"Switzerland", scoreA:null, scoreB:null, preds:{}},
+    {id:97, startUtc:"2026-07-09T20:00:00Z", teamA:"France", teamB:"Morocco", scoreA:2, scoreB:0, preds:{
+      "Nahuel": {a:2, b:2},
+      "Lauti":  {a:3, b:2},
+      "Naty":   {a:1, b:2}
+    }},
+    {id:98, startUtc:"2026-07-10T19:00:00Z", teamA:"Spain", teamB:"Belgium", scoreA:2, scoreB:1, preds:{
+      "Nahuel": {a:1, b:2},
+      "Lauti":  {a:2, b:1},
+      "Naty":   {a:1, b:3}
+    }},
+    {id:99, startUtc:"2026-07-11T21:00:00Z", teamA:"Norway", teamB:"England", scoreA:null, scoreB:null, preds:{
+      "Nahuel": {a:2, b:1},
+      "Lauti":  {a:2, b:1},
+      "Naty":   {a:1, b:2}
+    }},
+    {id:100, startUtc:"2026-07-12T01:00:00Z", teamA:"Argentina", teamB:"Switzerland", scoreA:null, scoreB:null, preds:{
+      "Nahuel": {a:2, b:0},
+      "Lauti":  {a:2, b:0},
+      "Naty":   {a:2, b:1}
+    }},
     
     // Semifinales
 
@@ -588,7 +604,7 @@ const DB = {
   // para forzar que los clientes actualicen su localStorage con esta versión.
   // Aumenta este número en cada deploy para forzar que los navegadores
   // sobrescriban su `localStorage.prode_db` con el bundle nuevo.
-  seedVersion: 20260663,
+  seedVersion: 20260665,
   // Si querés sincronizar en la nube, pegá aquí la configuración de Firebase (web app)
   // Este objeto fue copiado desde Firebase console (SDK setup). Se usa tal cual.
   // Firebase deshabilitado (usás Netlify desplegando los archivos estáticos)
@@ -673,6 +689,6 @@ loadDB();
 DB.participants = ["Nahuel","Lauti","Naty"];
 saveDB();
 
-// prode23
-// seedVersion: 20260663
-// v=20260618-18
+// prode24
+// seedVersion: 20260665
+// v=20260618-19
