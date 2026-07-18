@@ -580,12 +580,12 @@ const DB = {
       "Lauti":  {a:2, b:1},
       "Naty":   {a:1, b:3}
     }},
-    {id:99, startUtc:"2026-07-11T21:00:00Z", teamA:"Norway", teamB:"England", scoreA:null, scoreB:null, preds:{
+    {id:99, startUtc:"2026-07-11T21:00:00Z", teamA:"Norway", teamB:"England", scoreA:1, scoreB:1, preds:{
       "Nahuel": {a:2, b:1},
       "Lauti":  {a:2, b:1},
       "Naty":   {a:1, b:2}
     }},
-    {id:100, startUtc:"2026-07-12T01:00:00Z", teamA:"Argentina", teamB:"Switzerland", scoreA:null, scoreB:null, preds:{
+    {id:100, startUtc:"2026-07-12T01:00:00Z", teamA:"Argentina", teamB:"Switzerland", scoreA:1, scoreB:1, preds:{
       "Nahuel": {a:2, b:0},
       "Lauti":  {a:2, b:0},
       "Naty":   {a:2, b:1}
@@ -593,10 +593,33 @@ const DB = {
     
     // Semifinales
 
-    {id:101, startUtc:"2026-07-14T19:00:00Z", teamA:"W97", teamB:"W98", scoreA:null, scoreB:null, preds:{}},
-    {id:102, startUtc:"2026-07-15T19:00:00Z", teamA:"W99", teamB:"W100", scoreA:null, scoreB:null, preds:{}},
-    {id:103, startUtc:"2026-07-18T21:00:00Z", teamA:"L101", teamB:"L102", scoreA:null, scoreB:null, preds:{}},
-    {id:104, startUtc:"2026-07-19T19:00:00Z", teamA:"W101", teamB:"W102", scoreA:null, scoreB:null, preds:{}},
+    {id:101, startUtc:"2026-07-14T19:00:00Z", teamA:"France", teamB:"Spain", scoreA:0, scoreB:2, preds:{
+      "Nahuel": {a:2, b:1},
+      "Lauti":  {a:1, b:2},
+      "Naty":   {a:1, b:1}
+    }},
+    {id:102, startUtc:"2026-07-15T19:00:00Z", teamA:"England", teamB:"Argentina", scoreA:1, scoreB:2, preds:{
+      "Nahuel": {a:1, b:3},
+      "Lauti":  {a:1, b:1},
+      "Naty":   {a:1, b:2}
+    }},
+
+    // Tercer puesto
+
+    {id:103, startUtc:"2026-07-18T21:00:00Z", teamA:"France", teamB:"England", scoreA:4, scoreB:6, preds:{
+      "Nahuel": {a:3, b:1},
+      "Lauti":  {a:2, b:1},
+      "Naty":   {a:1, b:1}
+    }},
+
+    // Final
+
+    {id:104, startUtc:"2026-07-19T19:00:00Z", teamA:"Spain", teamB:"Argentina", scoreA:null, scoreB:null, preds:{
+      "Nahuel": {a:2, b:3},
+      "Lauti":  {a:2, b:1},
+      "Naty":   {a:1, b:2}
+    }},
+    
   ],
   // Ajustes sencillos
   adminPass: 'Cococho1595',
@@ -604,7 +627,7 @@ const DB = {
   // para forzar que los clientes actualicen su localStorage con esta versión.
   // Aumenta este número en cada deploy para forzar que los navegadores
   // sobrescriban su `localStorage.prode_db` con el bundle nuevo.
-  seedVersion: 20260665,
+  seedVersion: 20260667,
   // Si querés sincronizar en la nube, pegá aquí la configuración de Firebase (web app)
   // Este objeto fue copiado desde Firebase console (SDK setup). Se usa tal cual.
   // Firebase deshabilitado (usás Netlify desplegando los archivos estáticos)
@@ -689,6 +712,6 @@ loadDB();
 DB.participants = ["Nahuel","Lauti","Naty"];
 saveDB();
 
-// prode24
-// seedVersion: 20260665
-// v=20260618-19
+// prode25
+// seedVersion: 20260667
+// v=20260618-20
