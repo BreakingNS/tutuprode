@@ -46,3 +46,22 @@ header.hero{background:linear-gradient(90deg,rgba(242,183,5,0.12),rgba(255,255,2
 	.match{padding:16px}
 	.team{font-size:1.2rem}
 }
+
+/* Podio fijo a la derecha (visible en pantallas grandes) */
+.podium{display:block;width:100%;background:var(--card);color:#000;padding:12px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.12);margin-top:18px}
+.podioInner{display:flex;flex-direction:column;gap:8px}
+.podioTitle{font-weight:800;font-size:1.05rem;text-align:center}
+.medals{display:flex;flex-direction:column;gap:8px}
+.medal{display:flex;justify-content:space-between;align-items:center;padding:8px;border-radius:8px}
+.medal .name{font-weight:800}
+.medal.gold{background:linear-gradient(90deg,#ffd70022,#fff8cc);border:1px solid #ffd700}
+.medal.silver{background:linear-gradient(90deg,#c0c0c022,#f0f0f0);border:1px solid #c0c0c0}
+.medal.bronze{background:linear-gradient(90deg,#cd7f3222,#f9efe6);border:1px solid #cd7f32}
+.podioHighlights{font-size:0.95rem}
+.podioHighlights h3{margin:8px 0 6px 0}
+.podioHighlights ul{margin:0;padding-left:16px}
+.evolutionWrap{max-height:220px;overflow:auto}
+.evolutionTableWrap table{width:100%;border-collapse:collapse;background:transparent;color:#000}
+.evolutionTableWrap th,.evolutionTableWrap td{padding:6px;border-bottom:1px solid rgba(0,0,0,0.06);font-size:0.9rem;text-align:left}
+
+/* Responsive: el podio se mostrará en todos los tamaños como sección embebida */

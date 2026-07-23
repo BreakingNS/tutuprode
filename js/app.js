@@ -203,12 +203,104 @@ document.addEventListener('DOMContentLoaded',()=>{
     renderSummary();
   }
 
+  // ---------- Podio y destacados ----------
+  function computeDailyEvolution(){
+    // devuelve array de {day, pointsByParticipant: {name:points,...}}
+    const participants = DB.participants.slice();
+    const matches = DB.matches.slice().sort((a,b)=> new Date(a.startUtc)-new Date(b.startUtc));
+    const days = DB.days.slice();
+    const out = [];
+    // acumuladores
+    const accum = {};
+    participants.forEach(p=> accum[p]=0);
+    for(const day of days){
+      const end = new Date(day + 'T23:59:59Z');
+      const todays = matches.filter(m=> new Date(m.startUtc) <= end);
+      // compute points up to this day
+      participants.forEach(p=> accum[p]=0);
+      // iterate matches up to day
+      todays.forEach(m=>{
+        if(m.scoreA===null || m.scoreB===null) return;
+        participants.forEach(p=>{
+          const pred = (m.preds && m.preds[p]) || null;
+          if(!pred) return;
+          const pa = Number(pred.a), pb = Number(pred.b);
+          if(Number.isNaN(pa) || Number.isNaN(pb)) return;
+          if(pa===m.scoreA && pb===m.scoreB) accum[p]+=3;
+          else {
+            const sign = (x,y)=> x>y?1:(x<y?-1:0);
+            if(sign(pa,pb)===sign(m.scoreA,m.scoreB)) accum[p]+=1;
+          }
+        });
+      });
+      // copy accum values
+      const snap = {};
+      participants.forEach(p=> snap[p]=accum[p]);
+      out.push({day, points:snap});
+    }
+    return out;
+  }
+
+  function renderPodium(){
+    const podium = document.getElementById('podium');
+    const podioMedals = document.getElementById('podioMedals');
+    const highlightsList = document.getElementById('highlightsList');
+    const statsList = document.getElementById('statsList');
+    const evolutionWrap = document.getElementById('evolutionTableWrap');
+    if(!podium || !podioMedals) return;
+    podium.style.display = 'block';
+    // Usar los valores que indicaste explícitamente
+    const fixed = [
+      {name:'Nahuel', points:64, cls:'gold'},
+      {name:'Lauti', points:61, cls:'silver'},
+      {name:'Naty', points:58, cls:'bronze'}
+    ];
+    podioMedals.innerHTML = '';
+    fixed.forEach(f=>{
+      const div = document.createElement('div'); div.className = `medal ${f.cls}`;
+      div.innerHTML = `<div class="name">${f.name}</div><div class="score">${f.points} pts</div>`;
+      podioMedals.appendChild(div);
+    });
+
+    // Destacados solicitados (solo nombres)
+    highlightsList.innerHTML = '';
+    const lines = ['Ganador: Nahuel - 64 puntos', 'Mejor inicio/consistencia: Naty', 'Mejor pronosticador por exactos: Naty (7)', 'Mejores Ganador/Empates correctos: Nahuel y Lauti (49)'];
+    lines.forEach(txt=>{ const li=document.createElement('li'); li.textContent = txt; highlightsList.appendChild(li); });
+
+    // También completar la sección de estadísticas con los mismos items por separado (si corresponde)
+    statsList.innerHTML = '';
+    const statA = document.createElement('li'); statA.textContent = 'Ganador: Nahuel - 64 pts'; statsList.appendChild(statA);
+    const statB = document.createElement('li'); statB.textContent = 'Mejor inicio/consistencia: Naty'; statsList.appendChild(statB);
+
+    // evolution table (computada)
+    evolutionWrap.innerHTML = '';
+    const evo = computeDailyEvolution();
+    const table = document.createElement('table');
+    const thead = document.createElement('thead');
+    const hrow = document.createElement('tr');
+    hrow.innerHTML = `<th>Fecha</th>` + DB.participants.map(p=>`<th>${p}</th>`).join('');
+    thead.appendChild(hrow); table.appendChild(thead);
+    const tbody = document.createElement('tbody');
+    evo.forEach(row=>{
+      const tr = document.createElement('tr');
+      const dayLabel = document.createElement('td'); dayLabel.textContent = formatDayDisplay(row.day);
+      tr.appendChild(dayLabel);
+      DB.participants.forEach(p=>{ const td=document.createElement('td'); td.textContent = row.points[p]||0; tr.appendChild(td); });
+      tbody.appendChild(tr);
+    });
+    table.appendChild(tbody);
+    evolutionWrap.appendChild(table);
+  }
+
   // (Se eliminó la sección de grupos por preferencia del usuario)
 
-  daySelect.addEventListener('change',e=>renderMatches(e.target.value));
+  daySelect.addEventListener('change',e=>{ renderMatches(e.target.value); renderPodium(); });
+
+  // inicializar podio
 
   render();
-
+  // render podium after initial render
+  renderPodium();
   // Si la DB se actualiza desde remoto, re-renderizar
   document.addEventListener('dbUpdated', ()=>{
     render();
